@@ -1,0 +1,20 @@
+<!-- WHAT IS DOM ?
+DOM = Document Obejct Model is a tree a like structure where
+
+The Webpage = Document
+HTML elements = nodes/objects
+JS can manipulate DOM nodes dynamically -->
+
+<div>
+    <div id="myId">ID</div>
+    <div class="myClass">CLASS</div>
+    <p>PARAGRAPH</p>
+</div>
+
+<script>
+    console.log(document.getElementById("myId"));//<div id="myId">ID</div>
+    console.log(document.getElementsByClassName("myClass"));//HTMLCollection(1)
+    console.log(document.getElementsByTagName("p"));//HTMLCollection(1)
+    console.log(document.querySelector("#myId"));//<div id="myId">ID</div>
+    console.log(document.querySelectorAll("myClass"));//NodeList []
+</script>

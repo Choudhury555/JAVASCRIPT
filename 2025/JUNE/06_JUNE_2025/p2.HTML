@@ -1,0 +1,20 @@
+<div id="1">
+    <p>PARAGRAPH 1</p>
+    <p>PARAGRAPH 2</p>
+</div>
+
+<script>
+    const arr = document.getElementsByTagName("p");
+    arr[0].textContent = "PARAGRAPH ONE";
+    arr[1].innerHTML = "PARAGRAPH TWO";
+
+    arr[0].style.color = "red";
+    arr[1].style.fontSize = "24px"
+
+    const newDiv = document.createElement("div");
+    newDiv.textContent = "This is new div";
+    
+    const parent = document.getElementById("1");
+    parent.appendChild(newDiv);
+    console.log(parent);
+</script>

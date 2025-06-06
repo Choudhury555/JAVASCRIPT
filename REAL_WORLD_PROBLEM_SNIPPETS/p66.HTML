@@ -1,0 +1,12 @@
+<p>Dynamically add items to a list</p>
+
+<button id="addItem">Add Item</button>
+<ul id="list"></ul>
+
+<script>
+    document.getElementById("addItem").addEventListener("click",function(){
+        const newLi = document.createElement("li");
+        newLi.textContent = "New List Item";
+        document.getElementById("list").appendChild(newLi)
+    })
+</script>

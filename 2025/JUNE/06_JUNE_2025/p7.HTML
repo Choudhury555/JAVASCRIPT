@@ -1,0 +1,12 @@
+<form id="myForm">
+    <input type="text" name="username" placeholder="Enter Name" required>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("myForm").addEventListener("submit",function(e){
+        e.preventDefault();
+        alert("Form Submitted");
+        // document.getElementsByTagName("input")[0].value="";
+    })
+</script>

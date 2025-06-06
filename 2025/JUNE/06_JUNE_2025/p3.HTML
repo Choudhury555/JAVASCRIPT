@@ -1,0 +1,17 @@
+<div id="1">
+    <p>PARAGRAPH 1</p>
+    <button id="clickMe">Click</button>
+</div>
+
+<script>
+    const btn = document.getElementById("clickMe");
+    btn.addEventListener("click",function(){
+        const temp = document.getElementsByTagName("p");
+        console.log(temp);//HTMLCollection [p]
+        
+        temp[0].innerHTML="Changed After Button Click"
+    })
+
+    //common Events
+    // click,input,submit,mouseenter,keydown
+</script>

@@ -1,0 +1,10 @@
+<p>Change text on button click</p>
+
+<button id="changeBtn">Click Me</button>
+<p id="text">Original Text</p>
+
+<script>
+    document.getElementById("changeBtn").addEventListener("click",function(){
+        document.getElementById("text").textContent = "TEXT CHANGED";
+    })
+</script>
