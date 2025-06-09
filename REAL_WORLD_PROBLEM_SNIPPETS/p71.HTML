@@ -1,0 +1,19 @@
+<p>Simple form validation</p>
+<form id="signup">
+    <input type="text" id="email" placeholder="Enter email" />
+    <button type="submit">Submit</button>
+</form>
+
+
+<script>
+    document.getElementById("signup").addEventListener("submit",function(e){
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+
+        if(!email.includes("@")){
+            alert("Invalid Email Address");
+        }else{
+            alert("Email Submitted");
+        }
+    })
+</script>

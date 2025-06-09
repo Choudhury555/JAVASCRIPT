@@ -1,0 +1,13 @@
+<form id="logForm">
+    <input type="text" id="username" placeholder="Enter name" />
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("logForm").addEventListener("submit",function(e){
+        e.preventDefault();
+        const val = document.getElementById("username").value;
+        console.log(val);
+        alert(val);
+    })
+</script>

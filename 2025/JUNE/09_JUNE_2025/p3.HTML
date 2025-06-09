@@ -1,0 +1,11 @@
+<button id="toggleBtn">Click To See Magic</button>
+<div style="width: 100px; height: 100px; background-color: red;" id="box"></div>
+
+<script>
+    const box = document.getElementById("box");
+    box.style.display = "none";
+
+    document.getElementById("toggleBtn").addEventListener("click",()=>{
+        box.style.display = box.style.display=== "none" ? "block" : "none";
+    })
+</script>

@@ -1,0 +1,11 @@
+<input type="text" id="emailInput" placeholder="Enter email" />
+<span id="warn" style="color:red"></span>
+
+
+<script>
+    document.getElementById("emailInput").addEventListener("blur",function(){
+        const email = this.value;
+        const warn = document.getElementById("warn");
+        warn.textContent = email.includes("@") ? "" : "Invalid Email missing (@)"
+    })
+</script>

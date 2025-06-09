@@ -1,0 +1,13 @@
+<form id="myForm">
+    <input type="text" id="username">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    const form = document.getElementById("myForm");
+    form.addEventListener("submit",function(e){
+        e.preventDefault();
+        const val = document.getElementById("username").value;
+        alert(`Submitted ${val}`);
+    })
+</script>

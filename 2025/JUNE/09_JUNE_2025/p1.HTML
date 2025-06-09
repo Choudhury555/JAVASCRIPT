@@ -1,0 +1,9 @@
+<p>-----Handling Input Events-----</p>
+<input type="text" id="username">
+
+<script>
+    const inpt = document.getElementById("username");
+    inpt.addEventListener("input",function(){
+        console.log(this.value);
+    })
+</script>

@@ -1,0 +1,11 @@
+<input type="text" id="nameInput" placeholder="Enter name" />
+
+<script>
+    document.getElementById("nameInput").addEventListener("blur",function(){
+        if(this.value.trim() !== ""){
+            this.style.border = "5px solid green"
+        }else{
+            this.style.border = "5px solid red"
+        }
+    })
+</script>
