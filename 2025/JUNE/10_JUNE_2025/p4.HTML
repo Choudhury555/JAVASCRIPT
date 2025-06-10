@@ -1,0 +1,23 @@
+<ul id="list">
+    <li><span>Item 1</span></li>
+    <li><button>Delete</button></li>
+    <p><button>Another Delete</button></p>
+</ul>
+
+<script>
+    document.getElementById("list").addEventListener("click",(e)=>{
+        console.log(e.target);
+        
+        const temp = e.target.closest("li");
+        console.log(temp);
+
+        if(temp){
+            temp.remove();// removes the whole <li> regardless of where inside it was clicked
+        }
+    })
+
+    //What does .closest("li") do?
+    // It starts from e.target and climbs up the DOM to find the nearest <li> element
+    //It includes e.target itself in the check.
+    // If it finds an <li>, it returns it. If not, it returns null.
+</script>

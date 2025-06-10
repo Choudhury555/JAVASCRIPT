@@ -1,0 +1,13 @@
+<div id="divId">
+    <p id="paraId1">Paragraph 1</p>
+    <p id="paraId2">Paragraph 2</p>
+    <p id="paraId3">Paragraph 3</p>
+</div>
+
+<script>
+    const p1 = document.getElementById("paraId1");
+    p1.remove();
+
+    const p2 = document.getElementById("paraId2");
+    p2.parentElement.removeChild(document.getElementById("paraId3"));//find p2's parent and tell it to remove "paraId3"
+</script>

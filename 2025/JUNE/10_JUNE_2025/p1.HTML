@@ -1,0 +1,21 @@
+<div id="divId">
+    <p id="paraId">Paragraph</p>
+    <h1 id="headerId1">Header 1</h1><!-- This is comment-->
+    <h2 id="headerId12">Header 2</h2>
+</div>
+
+<script>
+    const ele = document.getElementById("paraId");
+    console.log(ele.parentElement);//<div id="divId"><p id="paraId">Paragraph</p><h1 id="headerId1">Header 1</h1><h1 id="headerId12">Header 2</h1></div>
+
+    const ele1 = document.getElementById("divId")
+    console.log(ele1.children);//HTMLCollection(3) [p#paraId, h1#headerId1, h1#headerId12, paraId: p#paraId, headerId1: h1#headerId1, headerId12: h1#headerId12]  (returns an HTMLCollection — a live collection of element nodes (not text or comment nodes).)
+    console.log(ele1.childNodes);//NodeList(8) [text, p#paraId, text, h1#headerId1, comment, text, h2#headerId12, text] (ele1.childNodes returns a NodeList of all child nodes, including:Text nodes (like spaces, newlines),Element nodes (<p>, <h1> ,<h1>),Comment nodes (<!-- -->))
+
+    const ele2 = document.getElementById("headerId1");
+    console.log(ele2.previousSibling);//#text
+    console.log(ele2.previousElementSibling);//<p id="paraId">Paragraph</p>
+
+    console.log(ele2.nextSibling);//<!-- This is comment-->
+    console.log(ele2.nextElementSibling);//<h2 id="headerId12">Header 2</h2>
+</script>

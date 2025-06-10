@@ -1,0 +1,17 @@
+EVENT DELEGATION
+<ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <p>Para 1</p>
+    <li>Item 3</li>
+    <p>Para 2</p>
+</ul>
+
+<script>
+    document.getElementById("list").addEventListener("click",function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName=="LI"){
+            e.target.remove();
+        }
+    })
+</script>
