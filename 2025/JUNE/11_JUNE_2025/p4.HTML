@@ -1,0 +1,11 @@
+<div id="removeMe" style="padding:10px; background:salmon;">
+    This will be removed
+    <button id="removeBtn">Remove</button>
+</div>
+
+
+<script>
+    document.getElementById("removeBtn").addEventListener("click",function(){
+        document.getElementById("removeMe").remove();
+    })
+</script>

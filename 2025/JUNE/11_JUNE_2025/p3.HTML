@@ -1,0 +1,12 @@
+<div class="card" style="border:1px solid #aaa; padding:10px;">
+    <h3>Title</h3>
+    <button class="check">Check Card</button>
+</div>
+
+<script>
+    document.querySelector(".check").addEventListener("click",function(){
+        console.log(this);
+        const card = this.closest(".card");
+        card.style.backgroundColor = "lightgreen";
+    })
+</script>

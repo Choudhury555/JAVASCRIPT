@@ -1,0 +1,12 @@
+<div class="parent" style="padding:10px; border:1px solid black;">
+    <button class="child">Click me</button>
+</div>
+
+<script>
+    document.querySelector(".child").addEventListener("click",function(){
+        console.log(this);
+        console.log(this.parentElement);
+
+        this.parentElement.style.backgroundColor="lightgreen";
+    })
+</script>
