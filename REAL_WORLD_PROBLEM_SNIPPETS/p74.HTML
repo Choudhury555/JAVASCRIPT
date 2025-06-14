@@ -1,0 +1,15 @@
+<p>Highlight parent element on child button click</p>
+
+<div class="card" style="padding:10px; border:1px solid #000;">
+    <p>Card Content</p>
+    <button class="highlightBtn">Highlight</button>
+</div>
+
+<script>
+    document.querySelector(".highlightBtn").addEventListener("click",(e)=>{
+        console.log(e.target);
+        console.log(e.target.parentElement);
+        
+        e.target.parentElement.style.backgroundColor="lightyellow";
+    })
+</script>
