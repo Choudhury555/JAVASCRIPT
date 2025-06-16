@@ -1,0 +1,19 @@
+<p>Remove item from a dynamic list</p>
+
+<ul id="emailList">
+    <li>Email 1 <button class="delete">x</button></li>
+    <li>Email 2 <button class="delete">x</button></li>
+</ul>
+
+<script>
+    document.getElementById("emailList").addEventListener("click",(e)=>{
+        console.log(e.target.classList);
+        console.log(e.target.classList.contains("del"));
+        console.log(e.target.classList.contains("delete"));
+        console.log(e.target.parentElement);
+
+        if(e.target.classList.contains("delete")){
+            e.target.parentElement.remove();
+        }
+    })
+</script>
