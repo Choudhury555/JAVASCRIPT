@@ -1,0 +1,14 @@
+<p>
+    Why Browser Storage?
+To persist user data in the browser:
+    (i)Without a server
+    (ii)Even across page reloads
+</p>
+
+<script>
+    localStorage.setItem("username","Abhisek");
+    console.log(localStorage.getItem("username"));//"Abhisek"
+    localStorage.setItem("city","Jajpur");
+    localStorage.removeItem("username");//remove username property
+    localStorage.clear();//Removes All Keys
+</script>
