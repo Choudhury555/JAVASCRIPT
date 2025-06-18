@@ -1,0 +1,11 @@
+<p>sessionStorage (Cleared when tab/browser closes)</p>
+
+<script>
+    sessionStorage.setItem("token","someRandomToken");
+    sessionStorage.setItem("token_1","someRandomToken_1");
+
+    console.log(sessionStorage.getItem("token_1"));
+    
+    sessionStorage.removeItem("token");
+    console.log(sessionStorage.getItem("token"));
+</script>
