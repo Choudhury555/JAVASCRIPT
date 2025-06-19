@@ -1,0 +1,10 @@
+<p>Storing Objects? Use JSON.stringify / JSON.parse</p>
+
+<script>
+    const user = {name:"Abhi",loggedIn:true}
+    localStorage.setItem("user",JSON.stringify(user));
+
+    const stored = JSON.parse(localStorage.getItem("user"));
+    console.log(stored.loggedIn);
+    
+</script>
