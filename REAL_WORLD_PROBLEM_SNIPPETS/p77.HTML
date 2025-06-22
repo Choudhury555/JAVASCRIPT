@@ -1,0 +1,23 @@
+<p>Save and display user name from localStorage</p>
+
+<input type="text" id="nameInput" placeholder="Enter your name"/>
+<button id="saveName">Save</button>
+<p id="greeting"></p>
+
+<script>
+    const input = document.getElementById("nameInput");
+    const greeting = document.getElementById("greeting");
+
+    document.getElementById("saveName").addEventListener("click",()=>{
+        localStorage.setItem("username",input.value);
+        greeting.textContent= `Welcome ${input.value}`;
+    })
+
+    //Load on page load
+    const storedName = localStorage.getItem("username");
+    console.log(storedName);
+    
+    if(storedName){
+        greeting.textContent=`Welcome Back ${storedName}`;
+    }
+</script>
