@@ -1,0 +1,18 @@
+<p>Save login token to sessionStorage</p>
+<button id="login">Login</button>
+<button id="logout">Logout</button>
+
+<script>
+    document.getElementById("login").addEventListener("click",login);
+    document.getElementById("logout").addEventListener("click",logout);
+
+    function login(){
+        sessionStorage.setItem("token","abc123");
+        console.log("Logged in with Token : ",sessionStorage.getItem("token"));
+    }
+
+    function logout(){
+        sessionStorage.removeItem("token");
+        console.log("Logged Out");
+    }
+</script>

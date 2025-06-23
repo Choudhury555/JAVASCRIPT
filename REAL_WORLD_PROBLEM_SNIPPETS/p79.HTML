@@ -1,0 +1,14 @@
+<p>Store and retrieve a user object in localStorage</p>
+
+<script>
+    const user = {
+        name: "Abhisek",
+        email: "abhi@example.com",
+        loggedIn: true
+    };
+
+    localStorage.setItem("userProfile",JSON.stringify(user));
+
+    const storedUser = JSON.parse(localStorage.getItem("userProfile"));
+    console.log(storedUser.email);
+</script>
