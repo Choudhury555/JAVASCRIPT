@@ -15,6 +15,14 @@ addBtn.addEventListener("click",()=>{
     console.log(taskText);
 
     if(taskText){
+        addTaskToDOM(taskText);
         input.value = "";
+        // saveTask();
     }
 })
+
+function addTaskToDOM(text){
+    const li = document.createElement("li");
+    li.textContent=text;
+    list.appendChild(li);
+}
