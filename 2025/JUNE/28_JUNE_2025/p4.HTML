@@ -1,0 +1,18 @@
+<p>Basic Debounce Function (Limits executions after rapid input)</p>
+
+<input type="text" id="search" placeholder="Type to search..." />
+
+<script>
+    function debounce(func,delay){
+        let timeout;
+        return function(...args){
+            clearTimeout(timeout);//comment out this and see why we required debounce
+            timeout = setTimeout(()=>func.apply(this,args),delay);
+        }
+    }
+
+    const logInput = debounce((e)=>{console.log("Seacrch...",e.target.value)},2000);
+    console.log(logInput);
+
+    document.getElementById("search").addEventListener("input",logInput);
+</script>
