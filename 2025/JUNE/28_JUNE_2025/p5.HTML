@@ -1,0 +1,23 @@
+<p>Basic Throttle Function (Limits how often a function runs)</p>
+
+<script>
+    function throttle(func,limit){
+        let throttleFlag=false;
+        return function(...args){
+            if(throttleFlag==false){
+                func.apply(this,args);
+                throttleFlag=true;
+                setTimeout(()=>{throttleFlag=false},limit);
+            }
+        }
+    }
+
+    const onResize = throttle(()=>{
+        console.log("Resized at ",new Date().toLocaleTimeString());
+    },1000);
+
+    console.log(onResize);
+    
+
+    window.addEventListener("resize",onResize);
+</script>
