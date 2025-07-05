@@ -1,0 +1,19 @@
+<p>Use the debounce function to log input after the user stops typing.</p>
+
+<input type="text" id="search" placeholder="Type to search..." />
+
+<script>
+    function debounceFunc(func,delay){
+        let timeout;
+        return function(...args){
+            clearTimeout(timeout);
+            timeout = setTimeout(()=>func.apply(this,args),delay);
+        }
+    }
+
+    const tempFunc = debounceFunc((e)=>{console.log("API Call...")},2000);
+    console.log(tempFunc);
+    
+
+    document.getElementById("search").addEventListener("input",tempFunc);
+</script>
