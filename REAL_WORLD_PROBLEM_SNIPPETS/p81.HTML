@@ -1,0 +1,12 @@
+<p>Show a message 3 seconds after clicking a button</p>
+
+<button id="showBtn">Show Message</button>
+<p id="msg"></p>
+
+<script>
+    document.getElementById("showBtn").addEventListener("click",()=>{
+        setTimeout(()=>{
+            document.getElementById("msg").textContent = "Loaded After 3 seconds";
+        },3000);
+    })
+</script>
