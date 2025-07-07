@@ -1,0 +1,16 @@
+<p>Live counter using setInterval</p>
+
+<p>Count: <span id="count">0</span></p>
+<button id="stopCount">Stop</button>
+
+<script>
+    let i=0;
+
+    const counter = setInterval(()=>{
+        document.getElementById("count").textContent =  ++i;
+    },1000);
+
+    document.getElementById("stopCount").addEventListener("click",()=>{
+        clearInterval(counter);
+    })
+</script>
