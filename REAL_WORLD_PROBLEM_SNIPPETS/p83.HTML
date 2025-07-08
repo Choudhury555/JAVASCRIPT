@@ -1,0 +1,20 @@
+<p>Debounce input logging</p>
+
+<input type="text" id="search" placeholder="Type to search..." />
+
+<script>
+    function debounce(func,delay){
+        let timeout;
+        return function(...args){
+            clearTimeout(timeout);
+            timeout = setTimeout(()=>func.apply(this,args),delay);
+        }
+    }
+
+    const logInput = debounce((e)=>{
+        console.log("API Called... for input = ",e.target.value);
+        
+    },3000);
+
+    document.getElementById("search").addEventListener("input",logInput);
+</script>

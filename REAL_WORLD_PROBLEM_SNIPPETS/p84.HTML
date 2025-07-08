@@ -1,0 +1,20 @@
+<p>Throttle window resize events</p>
+
+<script>
+    function throttle(func,limit){
+        let inThrottle=false;
+        return function(...args){
+            if(inThrottle==false){
+                func.apply(this,args);
+                inThrottle = true;
+                setTimeout(()=>(inThrottle=false),limit);
+            }
+        }
+    }
+
+    const functionResize = throttle(()=>{
+        console.log("Resized at: ",new Date().toLocaleTimeString());
+    },1000);
+
+    window.addEventListener("resize",functionResize);
+</script>
