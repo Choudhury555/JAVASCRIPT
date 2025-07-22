@@ -1,0 +1,17 @@
+<p>Fetch and display a list of posts</p>
+
+<ul id="postList"></ul>
+
+<script>
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+    .then(res=>res.json())
+    .then(posts=>{
+        const list = document.getElementById("postList");
+        posts.forEach(post => {
+            const li = document.createElement("li");
+            li.textContent = `${post.id}. ${post.title}`
+            list.appendChild(li);
+        })
+    })
+    .catch(err=>console.error(err));
+</script>
