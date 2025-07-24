@@ -1,0 +1,10 @@
+<p>JSON + localStorage</p>
+
+<script>
+    const profile = {theme:"dark",loggedIn:true};
+    localStorage.setItem("profile",JSON.stringify(profile));
+
+    const savedProfile = JSON.parse(localStorage.getItem("profile"));
+    console.log(savedProfile);
+    console.log(savedProfile.theme);
+</script>
