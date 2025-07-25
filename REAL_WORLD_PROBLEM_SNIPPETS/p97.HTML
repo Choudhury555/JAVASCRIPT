@@ -1,0 +1,15 @@
+<p>Save & retrieve JSON in localStorage</p>
+
+<script>
+    const settings = {
+        theme:"dark",
+        language:"en",
+        notifications:true
+    }
+
+    localStorage.setItem("appSettings",JSON.stringify(settings));
+
+    const savedSettings = JSON.parse(localStorage.getItem("appSettings"));
+
+    console.log(savedSettings.theme);
+</script>
