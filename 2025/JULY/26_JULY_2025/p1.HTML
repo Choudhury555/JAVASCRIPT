@@ -1,0 +1,32 @@
+<p>Event Bubbling, Capturing & Delegation</p>
+
+<p>Event Flow in the DOM</p>
+<p>When an event (like click) happens on an element:</p>
+<pre>Capturing Phase – Event goes down from document → body → element.
+
+    Target Phase – Event reaches the target element.
+    
+    Bubbling Phase – Event bubbles up from element → body → document.</pre>
+
+
+<h1>Default Phase: Bubbling</h1>
+
+<div id="parent">
+    <button id="child">Click Me</button>
+</div>
+
+<pre>Output will be ==>
+
+    Child clicked
+    Parent clicked  ✅ (event bubbled up)
+</pre>
+
+<script>
+    document.getElementById("parent").addEventListener("click", () => {
+        console.log("Parent Clicked")
+    })
+
+    document.getElementById("child").addEventListener("click", () => {
+        console.log("Child Clicked");
+    })
+</script>

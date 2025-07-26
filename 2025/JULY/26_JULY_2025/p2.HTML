@@ -1,0 +1,23 @@
+<p>Capturing Phase</p>
+
+<div id="parent" style="padding:20px; background:lightblue;">
+    Parent
+    <button id="child">Child Button</button>
+</div>
+
+<script>
+    const parent = document.getElementById("parent");
+    const child = document.getElementById("child");
+
+    parent.addEventListener("click", () => {
+        console.log("Parent Clicked during CAPTURING PHASE");
+    }, true);//true indicates capture
+
+    child.addEventListener("click", () => {
+        console.log("Child Clicked");
+    })
+
+    parent.addEventListener("click", () => {
+        console.log("Parent Clicked during BUBBLING PHASE");
+    });//by default it is false
+</script>
