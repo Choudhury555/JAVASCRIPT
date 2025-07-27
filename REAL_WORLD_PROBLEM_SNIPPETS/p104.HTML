@@ -1,0 +1,23 @@
+<p>Event delegation on a list</p>
+
+<ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+<button id="addItem">Add Item</button>
+
+<script>
+    //Delegation
+    document.getElementById("itemList").addEventListener("click", (e) => {
+        if (e.target.tagName == "LI") {
+            console.log("Clicked: ", e.target.textContent);
+        }
+    })
+
+    // Dynamically add items
+    document.getElementById("addItem").addEventListener("click", () => {
+        const li = document.createElement("li");
+        li.textContent = `Item ${Math.random().toFixed(2)}`;
+        document.getElementById("itemList").appendChild(li);
+    })
+</script>

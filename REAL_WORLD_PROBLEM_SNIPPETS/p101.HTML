@@ -1,0 +1,23 @@
+<p>Demonstrate bubbling order</p>
+
+<div id="outer" style="padding:20px; background:#eee;">
+    Outer Div
+    <div id="inner" style="padding:20px; background:#ccc;">
+        Inner Div
+        <button id="btn">Click Me</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("outer").addEventListener("click", () => {
+        console.log("Outer clicked (bubbling)")
+    })
+
+    document.getElementById("inner").addEventListener("click", () => {
+        console.log("Inner clicked (bubbling)")
+    })
+
+    document.getElementById("btn").addEventListener("click", () => {
+        console.log("Button clicked")
+    })
+</script>
