@@ -1,0 +1,16 @@
+<p>Custom Data Attributes (dataset)</p>
+
+<button id="product" data-id="123" data-name="Laptop">Buy</button>
+
+<script>
+    const productBtn = document.getElementById("product");
+    console.log(productBtn);
+    console.log(productBtn.dataset);
+    console.log(productBtn.dataset.id);
+    console.log(productBtn.dataset.name);
+    
+    productBtn.dataset.price=999;
+    console.log(productBtn.dataset);
+    console.log(productBtn.dataset.price);
+
+</script>

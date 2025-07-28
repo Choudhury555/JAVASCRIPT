@@ -1,0 +1,20 @@
+<p>Working with Element Attributes</p>
+
+<a href="https://example.com" target="_blank">Visit Site</a>
+
+<script>
+    const link = document.querySelector("a");
+    console.log(link);
+
+    // Get attribute
+    console.log(link.getAttribute("href"));
+    console.log(link.getAttribute("target"));
+
+    // Set attribute
+    link.setAttribute("id","abc");
+    console.log(link);
+    
+    // Remove attribute
+    link.removeAttribute("target");
+    console.log(link);
+</script>

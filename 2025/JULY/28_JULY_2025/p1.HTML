@@ -1,0 +1,21 @@
+<p>Managing Classes with classList</p>
+
+<div id="box">This is a box</div>
+
+<script>
+    const box = document.getElementById("box");
+
+    // Add a class
+    box.classList.add("highlight");
+    console.log(box.classList);
+
+    // Remove a class
+    box.classList.remove("highlight");
+    console.log(box.classList);
+
+    // Toggle class (add if missing, remove if present)
+    box.classList.toggle("active");
+    console.log(box.classList);
+    console.log(box.classList.contains("active"));
+
+</script>
