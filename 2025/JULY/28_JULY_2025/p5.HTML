@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .active{
+                background-color: green;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>Add and Remove Classes on a Button Click</p>
+        <button id="toggleBtn">Toggle Class</button>
+
+        <script>
+            const btn = document.getElementById("toggleBtn");
+            btn.addEventListener("click",()=>{
+                btn.classList.toggle("active");
+                console.log(btn.classList)
+            })
+        </script>
+    </body>
+</html>

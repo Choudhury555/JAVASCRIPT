@@ -1,0 +1,14 @@
+<p>Use dataset to Read Product Info</p>
+
+<button id="productBtn" data-id="101" data-name="Laptop" data-price="50000" data-some-random-thing="qwert">Show Product Info</button>
+
+<script>
+    const btn = document.getElementById("productBtn");
+    btn.addEventListener("click",()=>{
+        console.log(btn.dataset);//{ "id": "101", "name": "Laptop", "price": "50000", "someRandomThing": "qwert" }
+        console.log(btn.dataset.id);
+        console.log(btn.dataset.name);
+        console.log(btn.dataset.price);
+        console.log(btn.dataset.someRandomThing);//"data-some-random-thing" will convert into "someRandomThing"
+    })
+</script>
