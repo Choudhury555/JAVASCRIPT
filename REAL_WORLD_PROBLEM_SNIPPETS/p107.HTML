@@ -1,0 +1,12 @@
+<p>Read product info from dataset</p>
+
+<button id="buyBtn" data-id="42" data-name="Laptop" data-price="1200">Buy Product</button>
+
+<script>
+    document.getElementById("buyBtn").addEventListener("click", (e) => {
+        const btn = e.target;
+        console.log(btn);
+        console.log(btn.dataset);
+        console.log(`Buying: ${btn.dataset.name} (ID: ${btn.dataset.id}) for $${btn.dataset.price}`);
+    })
+</script>

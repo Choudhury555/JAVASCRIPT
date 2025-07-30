@@ -1,0 +1,25 @@
+<p>Toggle active state on multiple items</p>
+
+<ul id="menu">
+    <li class="menu-item">Home</li>
+    <li class="menu-item">About</li>
+    <li class="menu-item">Contact</li>
+</ul>
+
+<style>
+    .active {
+        font-weight: bold;
+        color: blue;
+    }
+</style>
+
+<script>
+    document.getElementById("menu").addEventListener("click", (e) => {
+        console.log(e.target.classList);
+        if (e.target.classList.contains("menu-item")) {
+            console.log(document.querySelectorAll(".menu-item"));
+            document.querySelectorAll(".menu-item").forEach(item => item.classList.remove("active"));
+            e.target.classList.add("active");
+        }
+    })
+</script>
