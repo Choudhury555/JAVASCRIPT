@@ -1,0 +1,18 @@
+<p>Read Text from Clipboard (with permission)</p>
+
+<button onclick="copyText()">Copy Text</button>
+<button onclick="pasteText()">Paste Text</button>
+
+<script>
+    function copyText() {
+        navigator.clipboard.writeText("THIS TEXT IS COPIED TEXT")
+            .then(() => console.log("Copied to clipboard"))
+            .catch(err => console.error(err));
+    }
+
+    function pasteText() {
+        navigator.clipboard.readText()
+            .then(text => console.log("This is pasted from clipboard", text))
+            .catch(err => console.error(err));
+    }
+</script>

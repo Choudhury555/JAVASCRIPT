@@ -1,0 +1,11 @@
+<p>Copy Text to Clipboard (Modern Method)</p>
+<p>navigator.clipboard.writeText(...)==>This method writes (copies) the given text to the system clipboard.</p>
+
+<button onclick="copyText()">Copy Text</button>
+
+<script>
+    function copyText() {
+        navigator.clipboard.writeText("This text will be copied to clipboard(CMD+V to see the result)")
+            .then(() => console.log("Copied to clipboard"))
+    }
+</script>

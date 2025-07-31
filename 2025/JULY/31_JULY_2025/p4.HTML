@@ -1,0 +1,13 @@
+<div contenteditable="true">Select some text and click Italic/Bold</div>
+
+<button onclick="makeItalic()">Italic</button>
+<button onclick="makeBold()">Bold</button>
+
+<script>
+    function makeItalic() {
+        document.execCommand("italic");
+    }
+    function makeBold() {
+        document.execCommand("bold");
+    }
+</script>

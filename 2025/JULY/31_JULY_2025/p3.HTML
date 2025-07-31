@@ -1,0 +1,14 @@
+<p>Copy Input Field Text</p>
+
+<input type="text" id="copyInput" value="Copy me!" />
+<button onclick="copyText()">Copy</button>
+
+<script>
+    function copyText() {
+        const input = document.getElementById("copyInput");
+        console.log(input);
+        input.select();// Selects the text inside the input
+        document.execCommand("copy");// Copies the selected text to clipboard
+        console.log("Text copied (fallback)");
+    }
+</script>
