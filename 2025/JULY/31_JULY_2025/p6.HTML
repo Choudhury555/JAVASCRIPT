@@ -1,0 +1,13 @@
+<p>Handle Paste Event from User</p>
+
+<textarea id="pasteHere" placeholder="Paste here..."></textarea>
+
+<script>
+    document.getElementById("pasteHere").addEventListener("paste", (e) => {
+        const pasted = e.clipboardData.getData("text");
+        console.log(e);
+        console.log(e.clipboardData);
+        console.log(e.clipboardData.getData("text"));
+        console.log(pasted);
+    })
+</script>

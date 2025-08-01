@@ -1,0 +1,14 @@
+<p>Access Selected Text on Page</p>
+
+<p>Select some part of this sentence.</p>
+
+<script>
+    document.addEventListener("paste", () => {
+        const selected = window.getSelection().toString();//window.getSelection()==>Gets the currently selected text on the page.
+        console.log(selected);
+
+        if (selected) {
+            console.log("You have selected:", selected);
+        }
+    })
+</script>
