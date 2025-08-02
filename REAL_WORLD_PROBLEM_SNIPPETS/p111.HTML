@@ -1,0 +1,13 @@
+<p>Show selected text on the page</p>
+
+<p>Select any part of this sentence and release the mouse.</p>
+
+<script>
+    document.addEventListener("mouseup", () => {
+        const selected = window.getSelection().toString();
+        console.log(selected);
+        if (selected) {
+            alert("Selected: " + selected);
+        }
+    })
+</script>

@@ -3,7 +3,7 @@
 <p>Select some part of this sentence.</p>
 
 <script>
-    document.addEventListener("paste", () => {
+    document.addEventListener("mouseup", () => {
         const selected = window.getSelection().toString();//window.getSelection()==>Gets the currently selected text on the page.
         console.log(selected);
 

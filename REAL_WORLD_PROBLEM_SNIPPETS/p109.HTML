@@ -1,0 +1,12 @@
+<p>Copy static text to clipboard (Modern API)</p>
+
+<button id="copyBtn">Copy Code</button>
+
+<script>
+    const code = "JSY SHREE RAM";
+    document.getElementById("copyBtn").addEventListener("click", () => {
+        navigator.clipboard.writeText(code).then(() => {
+            alert("Code copied to clipboard!");
+        })
+    })
+</script>

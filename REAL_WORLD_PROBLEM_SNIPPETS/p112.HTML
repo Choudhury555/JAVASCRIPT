@@ -1,0 +1,10 @@
+<p>Capture and log pasted content</p>
+
+<textarea id="pasteBox" placeholder="Paste something here..."></textarea>
+
+<script>
+    document.getElementById("pasteBox").addEventListener("paste", (e) => {
+        const pasted = e.clipboardData.getData("text");
+        console.log(pasted);
+    })
+</script>

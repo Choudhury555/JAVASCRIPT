@@ -1,0 +1,15 @@
+<p>Copy input field value (Legacy fallback)</p>
+
+<input type="text" id="nameInput" value="Abhisek" />
+<button onclick="copyInput()">Copy Name</button>
+
+<script>
+    function copyInput() {
+        const input = document.getElementById("nameInput");
+        console.log(input);
+        input.select();
+        document.execCommand("copy");
+        console.log("Name copied!");
+        alert("Name copied!");
+    }
+</script>
