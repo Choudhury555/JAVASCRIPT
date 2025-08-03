@@ -1,0 +1,9 @@
+<p>Track Keystrokes in Input Field</p>
+
+<input type="text" id="nameInput" />
+
+<script>
+    document.getElementById("nameInput").addEventListener("keyup", (e) => {
+        console.log("You types:", e.key);
+    })
+</script>

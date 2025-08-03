@@ -1,0 +1,10 @@
+<p>Prevent Default Behavior</p>
+
+<script>
+    document.addEventListener("keydown", (e) => {
+        if (e.key == "Tab") {
+            e.preventDefault();
+            console.log("Tab is Disbled")
+        }
+    })
+</script>

@@ -1,0 +1,11 @@
+<p>Detect Key Combinations</p>
+
+<script>
+    document.addEventListener("keydown",(e)=>{
+        console.log(e.metaKey,e.key);
+        if(e.metaKey && e.key=="s"){
+            e.preventDefault();
+            alert("Save shortcut blocked!");
+        }
+    })
+</script>
