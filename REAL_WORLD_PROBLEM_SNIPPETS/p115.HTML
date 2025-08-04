@@ -1,0 +1,10 @@
+<p>Detect CMD + S shortcut</p>
+
+<script>
+    document.addEventListener("keydown", (e) => {
+        if (e.metaKey && e.key == "s") {
+            e.preventDefault();
+            alert("Ctrl + S blocked.");
+        }
+    })
+</script>

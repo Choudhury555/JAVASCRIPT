@@ -1,0 +1,11 @@
+<p>Block page reload on CMD+R</p>
+
+<script>
+    document.addEventListener("keydown", (e) => {
+        console.log(e.metaKey, e.key)
+        if (e.metaKey && e.key == "r") {
+            e.preventDefault();
+            alert("Reload disabled!");
+        }
+    })
+</script>
