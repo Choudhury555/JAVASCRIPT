@@ -1,0 +1,30 @@
+<p>Mouseenter vs Mouseover</p>
+
+<pre>
+    Try This:
+    ->Move your mouse from outside into Parent:
+        ✅ Both mouseenter and mouseover will log once.
+
+    ->Move your mouse from Parent into Child:
+        ❌ mouseenter does not log again.
+        ✅ mouseover logs again (because it bubbles and child is inside parent).
+</pre>
+
+<div id="parent" style="padding: 40px; background-color: lightblue;">
+    Parent
+    <div id="child" style="margin-top: 10px; padding: 20px; background-color: lightgreen;">
+        Child
+    </div>
+</div>
+
+<script>
+    const parent = document.getElementById("parent");
+
+    parent.addEventListener("mouseenter", () => {
+        console.log("mouseenter on PARENT");
+    });
+
+    parent.addEventListener("mouseover", () => {
+        console.log("mouseover on PARENT");
+    });
+</script>

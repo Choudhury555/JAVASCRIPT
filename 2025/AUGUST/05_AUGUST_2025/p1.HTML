@@ -1,0 +1,22 @@
+<pre>
+<h1>Common Mouse Events</h1>
+<h2>
+    click==>Fires on single click
+    dblclick==>Fires on double click
+    mousedown==>When mouse button is pressed
+    mouseup==>When mouse button is released
+    mouseenter==>When cursor enters element (no bubble)
+    mouseover==>When cursor is over the element (bubble)
+    mouseleave==>When cursor leaves
+    mousemove==>Fires while moving mouse over element
+    contextmenu==>Right-click (context menu)</h2>
+</pre>
+
+<p>Basic Click Event</p>
+<button id="btn">Click</button>
+
+<script>
+    document.getElementById("btn").addEventListener("click", () => {
+        console.log("Button Clicked");
+    })
+</script>
