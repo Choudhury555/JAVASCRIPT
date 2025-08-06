@@ -1,0 +1,17 @@
+<p>Hover to highlight a button</p>
+
+<button id="hoverBtn">Hover over me</button>
+
+<script>
+    const btn = document.getElementById("hoverBtn");
+
+    btn.addEventListener("mouseenter", () => {
+        btn.style.backgroundColor = "black";
+        btn.style.color = "white";
+    })
+
+    btn.addEventListener("mouseleave", () => {
+        btn.style.backgroundColor = "";
+        btn.style.color = "";
+    })
+</script>

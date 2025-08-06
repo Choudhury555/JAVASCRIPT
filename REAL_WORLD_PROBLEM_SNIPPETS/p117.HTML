@@ -1,0 +1,12 @@
+<p>Double-click to change color</p>
+<div id="colorBox" style="width:200px; height:100px; background:lightgray;">
+    Double-click me
+</div>
+
+<script>
+    const colorbox = document.getElementById("colorBox");
+
+    colorbox.addEventListener("dblclick", () => {
+        colorbox.style.background = "lightgreen"
+    })
+</script>
