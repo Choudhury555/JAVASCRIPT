@@ -1,0 +1,27 @@
+<pre>
+What is Debounce?
+-Debounce delays the execution until after a certain amount of time has passed since the last event.
+-In other word(Wait until the user stops doing something, then run the function once.)
+
+Common Use Cases of Debounce:
+    -Search input fields – Trigger the search only after the user stops typing.
+    -Window resize events – Perform expensive layout calculations only after resizing stops.
+    -Auto-save drafts – Save content after the user stops typing for a while.
+</pre>
+
+<input type="text" id="search" placeholder="Type to search..." />
+
+<script>
+    function debounce(func, delay) {
+        let timeout;
+        return function (...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func(...args), delay);
+        }
+    }
+
+    const logInput = debounce((e) => console.log(`Searched for ==> ${e.target.value}`), 3000);
+    console.log(logInput);
+
+    document.getElementById("search").addEventListener("input", logInput);
+</script>

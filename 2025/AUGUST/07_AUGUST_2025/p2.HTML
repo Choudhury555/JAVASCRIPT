@@ -1,0 +1,28 @@
+<pre>
+What is Throttle?
+-Throttle makes sure a function runs only once every X milliseconds,even if it's triggered many times during that period.
+-It limits the rate at which a function executes.
+
+Common Use Cases:
+    -Scroll tracking – Update scroll position every 100ms, not on every pixel moved
+    -Mouse move – Track mouse position at intervals
+    -Resize events – Optimize performance during window resizing
+</pre>
+
+<script>
+    function throttle(func, limit) {
+        let throttleFlag = false;
+        return function () {
+            if (throttleFlag == false) {
+                func();
+                throttleFlag = true;
+                setTimeout(() => { throttleFlag = false }, limit);
+            }
+        }
+    }
+
+    const onResize = throttle(() => { console.log("Resized", new Date()) }, 2000);
+    console.log(onResize);
+
+    window.addEventListener("resize", onResize);
+</script>
