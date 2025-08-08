@@ -1,0 +1,18 @@
+<p>Debounced input typing</p>
+<p>Goal: Log input value only after user stops typing for 2000ms</p>
+
+<input type="text" id="searchBox" placeholder="Type to search..." />
+
+<script>
+    function debounce(func, delay) {
+        let timer;
+        return function (...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => func.apply(this, args), delay);
+        }
+    }
+
+    const logInput = debounce((e) => { console.log("Searching for:", e.target.value); }, 2000);
+
+    document.getElementById("searchBox").addEventListener("input", logInput);
+</script>
