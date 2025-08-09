@@ -1,0 +1,23 @@
+<p>Debounced live “searching…” UI</p>
+<p>Show "Searching..." only after user pauses typing</p>
+
+<input type="text" id="queryInput" />
+<p id="status"></p>
+
+<script>
+    function debounce(func, delay) {
+        let timer;
+        return function (...args) {
+            console.log(args);
+            clearTimeout(timer);
+            timer = setTimeout(() => func.apply(this, args), delay);
+        }
+    }
+
+    const updateStatus = debounce((message) => { document.getElementById("status").textContent = message; }, 2000);
+
+    document.getElementById("queryInput").addEventListener("input", () => {
+        document.getElementById("status").textContent = "";
+        updateStatus(`Searching for "${event.target.value}"...`);
+    })
+</script>

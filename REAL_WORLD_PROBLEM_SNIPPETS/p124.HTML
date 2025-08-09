@@ -1,0 +1,20 @@
+<p>Throttled mousemove tracker</p>
+<p>Log mouse X/Y position only every 1000ms</p>
+
+<script>
+    function throttle(func, limit) {
+        let flag = false;
+        return function (...args) {
+            if (flag == false) {
+                // console.log(args);
+                func.apply(this, args);//or you can use func(...args)
+                flag = true;
+                setTimeout(() => { flag = false }, limit);
+            }
+        }
+    }
+
+    const trackMouse = throttle((e) => { console.log(`X: ${e.clientX}, Y: ${e.clientY}`); }, 1000)
+
+    window.addEventListener("mousemove", trackMouse);
+</script>
