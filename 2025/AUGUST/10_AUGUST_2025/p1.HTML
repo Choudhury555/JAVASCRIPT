@@ -1,0 +1,15 @@
+<p>Accessing Form Elements</p>
+
+<form id="form1">
+    <input type="text" id="username" placeholder="Username" />
+    <button type="submit" id="btn">Submit</button>
+</form>
+
+<script>
+    const form = document.getElementById("form1");
+    const ele = form.elements;
+    console.log(form);
+    console.log(ele);
+    console.log(ele["username"]);//ele[0]
+    console.log(ele["btn"]);//ele[1]
+</script>

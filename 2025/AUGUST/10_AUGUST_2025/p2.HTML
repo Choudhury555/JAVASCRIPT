@@ -1,0 +1,13 @@
+<p>Handling Form Submission</p>
+
+<form id="form1">
+    <input type="text" id="username" placeholder="Username" />
+    <button type="submit" id="btn">Submit</button>
+</form>
+
+<script>
+    document.getElementById("form1").addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log("Form Submitted");
+    })
+</script>

@@ -1,0 +1,25 @@
+<p>Showing Error Messages in UI</p>
+
+<form id="form1">
+    <input type="text" id="email" placeholder="Email" />
+    <button type="submit" id="btn">Submit</button>
+</form>
+
+<div id="errMsg"></div>
+
+<script>
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    document.getElementById("form1").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email");
+
+        if (emailRegex.test(email.value) == false) {
+            document.getElementById("errMsg").textContent = "Invalid Email";
+            document.getElementById("errMsg").style.color = "red";
+        } else {
+            document.getElementById("errMsg").textContent = "Valid Email";
+            document.getElementById("errMsg").style.color = "green";
+        }
+    })
+</script>
