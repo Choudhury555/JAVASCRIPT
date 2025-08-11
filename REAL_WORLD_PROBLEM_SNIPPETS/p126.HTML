@@ -1,0 +1,21 @@
+<p>Validate email format before submit</p>
+
+<form id="form2">
+    <input type="text" id="email" placeholder="Email" />
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("form2").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+            alert("❌ Please enter a valid email!");
+        } else {
+            console.log(email);
+        }
+    })
+</script>

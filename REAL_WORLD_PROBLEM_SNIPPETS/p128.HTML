@@ -1,0 +1,27 @@
+<p>Highlight invalid fields</p>
+
+<style>
+    .invalid {
+        border: 2px solid red;
+    }
+</style>
+
+<form id="form4">
+    <input type="text" id="nameField" placeholder="Name" />
+    <button type="submit">Submit</button>
+</form>
+
+
+<script>
+    document.getElementById("form4").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("nameField");
+        console.log(name);
+        if (name.value.trim() === "") {
+            name.classList.add("invalid");
+        } else {
+            name.classList.remove("invalid");
+        }
+    })
+</script>

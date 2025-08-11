@@ -1,0 +1,18 @@
+<p>Prevent submission if username is empty</p>
+
+<form id="form1">
+    <input type="text" id="username" placeholder="Username" />
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById("form1").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const username = document.getElementById("username").value.trim();
+        if (username == "") {
+            alert("Username is required");
+        } else {
+            console.log(username);
+        }
+    })
+</script>
