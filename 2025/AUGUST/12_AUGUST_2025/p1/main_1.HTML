@@ -1,0 +1,11 @@
+<p>Creating a Web Worker
+    -Web Workers require a separate .js file.</p>
+<script>
+    const worker = new Worker("worker_1.js");
+
+    worker.postMessage("Hello Worker");
+
+    worker.onmessage = (e) => {
+        console.log("Message from Worker", e.data);
+    }
+</script>

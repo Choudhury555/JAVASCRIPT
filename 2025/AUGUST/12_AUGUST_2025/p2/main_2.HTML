@@ -1,0 +1,12 @@
+<p>Terminating a Worker</p>
+<script>
+    const worker = new Worker("worker_2.js");
+
+    worker.postMessage("Hello Worker");
+
+    worker.onmessage = (e) => {
+        console.log("Message from Worker", e.data);
+        worker.terminate();
+        console.log("Worker terminated");
+    }
+</script>

@@ -1,0 +1,11 @@
+<p>Terminate worker after completion</p>
+
+<script>
+    const worker = new Worker("worker_mt_3.js");
+
+    worker.onmessage = (e) => {
+        console.log("Worker says:", e.data);
+        worker.terminate();
+        console.log("Worker terminated!");
+    }
+</script>

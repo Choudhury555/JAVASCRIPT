@@ -1,0 +1,11 @@
+<p>Simulate CPU-heavy image processing</p>
+
+<script>
+    const worker = new Worker("worker_mt_4.js");
+
+    worker.postMessage("Start processing...");
+
+    worker.onmessage = (e) => {
+        console.log("Worker result:", e.data);
+    }
+</script>

@@ -1,0 +1,11 @@
+<p>Send a message from main → worker → main</p>
+
+<script>
+    const worker = new Worker("worker_mt_2.js");
+
+    worker.postMessage("Hello Worker");
+
+    worker.onmessage = (e) => {
+        console.log("Message From worker_mt_2", e.data);
+    }
+</script>

@@ -1,0 +1,9 @@
+<p> Count from 1 to 1M without blocking UI</p>
+
+<script>
+    const worker = new Worker("worker_mt_1.js");
+
+    worker.onmessage = (e) => {
+        console.log("Count finished", e.data);
+    }
+</script>
