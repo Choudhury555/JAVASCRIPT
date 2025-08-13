@@ -1,0 +1,12 @@
+<p>Heavy calculation without freezing UI</p>
+<p>Count numbers in background without blocking the page.</p>
+
+<script>
+    const worker = new Worker("p130_worker.js");
+
+    worker.postMessage(1000000);
+
+    worker.onmessage = (e) => {
+        console.log("Worker finished counting:", e.data);
+    }
+</script>

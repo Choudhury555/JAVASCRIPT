@@ -1,0 +1,12 @@
+<p>Simulating image processing</p>
+<p>Fake an image-processing task using worker delays.</p>
+
+<script>
+    const worker = new Worker("p132_worker.js");
+
+    worker.postMessage("");
+
+    worker.onmessage = (e) => {
+        console.log("Image processed:", e.data);
+    }
+</script>

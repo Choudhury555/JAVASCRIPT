@@ -1,0 +1,13 @@
+<p>Terminating a worker</p>
+<p>Stop worker before it completes.</p>
+
+<script>
+    const worker = new Worker("p131_worker.js");
+
+    worker.postMessage("Start Task");
+
+    setTimeout(() => {
+        worker.terminate();
+        console.log("Worker terminated after 2 sec");
+    }, 2000);
+</script>

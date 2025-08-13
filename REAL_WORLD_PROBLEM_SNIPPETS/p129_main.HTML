@@ -1,0 +1,12 @@
+<p>Basic Web Worker message passing</p>
+<p>Send and receive messages between main thread and worker.</p>
+
+<script>
+    const worker = new Worker("p129_worker.js");
+
+    worker.postMessage("Hello from main Thread");
+
+    worker.onmessage = (e) => {
+        console.log("Message from Worker:", e.data);
+    }
+</script>
