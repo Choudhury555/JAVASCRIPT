@@ -1,0 +1,22 @@
+==>Fetch API + AbortController (Canceling Requests)
+
+==>Why AbortController?
+    -Sometimes we need to cancel ongoing requests:
+        -User navigates away
+        -Timeout reached
+        -New search query replaces old one
+
+    -AbortController provides a .signal to stop a request.
+
+
+==>SOME POINTS ABOUT AbortController
+AbortController → A built-in object that lets you cancel something (like fetch) before it finishes.
+signal → A property from AbortController that you give to fetch so it knows when to stop.
+controller.abort() → Sends a stop signal to anything using that signal.
+
+
+==>Practical Use Cases
+    -Search Autocomplete → cancel previous search when typing new input.
+    -Form Submissions → cancel if user changes page.
+    -Polling → stop polling when no longer needed.
+    -Slow API handling → stop request if it’s taking too long.
