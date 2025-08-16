@@ -1,0 +1,35 @@
+<p>Abort polling on button click</p>
+<p>Stop periodic fetch calls when the user clicks “Stop”.</p>
+
+<button id="stopBtn">Stop Polling</button>
+
+<script>
+    let controller;
+    let pooling;
+
+    function startPooling() {
+        pooling = setInterval(() => {
+            controller = new AbortController();
+            fetch("https://jsonplaceholder.typicode.com/posts", { signal: controller.signal })
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .catch(err => {
+                    if (err.name == "AbortError") {
+                        console.error("⏹ Poll request aborted");
+                    }
+                })
+        }, 2000);
+    }
+
+
+    document.getElementById("stopBtn").addEventListener("click", () => {
+        clearInterval(pooling);
+        if (controller) {
+            controller.abort();
+        }
+        console.log("🛑 Polling stopped");
+    })
+
+
+    startPooling();
+</script>
