@@ -1,0 +1,48 @@
+==>What is an Iterator?
+    -An object that defines a sequence and a way to access elements one at a time.
+    -Has a next() method that returns:{ value: ..., done: ... }
+
+==>Generators – A Shortcut to Create Iterators
+    -A generator function (function*) can pause and resume execution with yield.
+
+==>
+    -const iterator = myArray[Symbol.iterator](); is the built-in shortcut to create an iterator for arrays (or any iterable).
+    -Shortcut to create a generator ➝ use function* syntax.
+
+
+==>NOTE(Question of mine: what is the advantage of this generator function ? (we can do the same in normal function also right ???))
+    Advantages of Generators over Normal Functions:
+        (1).Lazy Evaluation (On-Demand values)
+            -Generator produces values one at a time only when requested.
+            -Normal function would create the whole array in memory at once.
+            -Useful when the dataset is huge or infinite (like streaming, pagination, infinite scroll).
+        (2).Memory Efficient
+            -Generator doesn’t store all results in memory.
+            -Example: Generating squares of numbers up to 1e9 → array will crash, generator works fine.
+        (3).Pause & Resume Execution
+            -Generator can pause at yield and resume later.
+            -Normal function runs completely and returns once.
+        (4).Infinite Sequences
+            -You can create infinite series (e.g., Fibonacci, streaming data).
+            -But Normal function must end and return something finite.
+
+        Example==>Of above Question
+                // Normal function → returns all at once
+                function squareArr(limit) {
+                    let result = [];
+                    for (let i = 1; i <= limit; i++) {
+                        result.push(i * i);
+                    }
+                    return result;
+                }
+                console.log(squareArr(5)); // [1, 4, 9, 16, 25]
+
+                // Generator → lazy, on-demand
+                function* squareGen(limit) {
+                    for (let i = 1; i <= limit; i++) {
+                        yield i * i;
+                    }
+                }
+                for (let val of squareGen(5)) {
+                    console.log(val); // 1, 4, 9, 16, 25 (generated one by one)
+                }
