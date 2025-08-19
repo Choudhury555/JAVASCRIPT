@@ -1,0 +1,21 @@
+<!-- Symbol in JavaScript -->
+-Symbol is a primitive data type (like number, string, etc.) introduced in ES6.
+-Each Symbol() is unique and immutable, even if they have the same description.
+-Mainly used as unique object property keys (to avoid accidental overwrites).
+
+
+
+<!-- Well-Known Symbols -->
+-JavaScript has built-in predefined Symbols called well-known symbols.
+-They let us customize object behavior (how objects interact with built-in operations).
+    -Symbol.iterator → makes object iterable with for...of.
+    -Symbol.toPrimitive → controls type conversion.
+    -Symbol.toStringTag → customizes Object.prototype.toString.
+    -Symbol.hasInstance → custom instanceof logic.
+
+
+<!-- Why Symbols Matter? -->
+-Hide private/internal properties.
+-Prevent accidental overwrites.
+-Provide hooks for customizing object behavior.
+-Used internally by libraries/frameworks (React uses Symbols for elements).
