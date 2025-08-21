@@ -1,0 +1,32 @@
+<!-- Map & Set -->
+
+<!-- (1)Map (Key-Value Store) -->
+-Similar to an object, but keys can be any type (objects, functions, primitives).
+-Maintains insertion order.
+-Provides built-in methods for iteration and size checking.
+
+Key Methods:
+    -.set(key, value) → add entry
+    -.get(key) → get value
+    -.has(key) → check existence
+    -.delete(key) → remove key
+    -.clear() → remove all
+    -.size → number of entries
+
+<!-- (2)Set (Unique Values Collection) -->
+-Stores only unique values.
+-Order is preserved.
+-Great for removing duplicates.
+
+Key Methods:
+    -.add(value) → insert value
+    -.has(value) → check existence
+    -.delete(value) → remove
+    -.clear() → remove all
+    -.size → number of elements
+
+
+<!-- (3)Differences vs Objects & Arrays -->
+-Objects → keys must be string/symbol; Map allows any type.
+-Arrays → duplicates allowed; Set enforces uniqueness.
+-Map/Set have better performance for frequent additions/deletions.
