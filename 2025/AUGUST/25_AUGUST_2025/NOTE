@@ -1,0 +1,17 @@
+<!-- WeakMap & WeakSet -->
+
+<!-- WeakMap -->
+-Similar to Map, but keys must be objects.
+-Keys are held weakly → if the object is no longer referenced elsewhere, it is garbage collected.
+-Not iterable (no for..of, .keys(), .values()).
+
+<!-- WeakSet -->
+-Similar to Set, but only stores objects.
+-Objects are held weakly → if object is no longer referenced, it’s auto-removed.
+-Not iterable, no .size.
+
+<!-- Key Differences (vs Map/Set) -->
+-Map/Set → keys/values stay in memory until explicitly deleted.
+-WeakMap/WeakSet → auto remove when object is garbage collected.
+-WeakMap/WeakSet → only objects allowed, not primitives.
+-Not iterable → for privacy & performance reasons.
