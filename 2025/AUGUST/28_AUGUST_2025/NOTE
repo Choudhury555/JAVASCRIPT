@@ -1,0 +1,28 @@
+<!-- Scope -->
+-Scope = The region where a variable/function is accessible.
+
+Types of Scope in JS:
+    -Global Scope → accessible everywhere.
+    -Function Scope → variables declared with var inside a function.
+    -Block Scope → variables declared with let & const inside {}.
+
+
+<!-- Hoisting -->
+-JavaScript moves declarations (not assignments) to the top of scope during compilation.
+-var is hoisted → initialized as undefined.
+-let and const are hoisted too, but kept in TDZ until initialized.
+
+
+<!-- Temporal Dead Zone (TDZ) -->
+-The time between hoisting and initialization where accessing the variable gives an error.
+
+
+<!-- Closures -->
+-Closure = Function + its lexical environment.
+-Even after the outer function is gone, inner function remembers variables.
+
+    Real-World Uses of Closures
+        -Data privacy
+        -Function factories
+        -Callbacks & Event handlers
+        -Memoization (performance optimization)
