@@ -1,0 +1,8 @@
+<!-- this Keyword -->
+
+What is this?
+-this is a special keyword that refers to the execution context (who is calling the function).
+-Its value depends on how a function is called, not where it is defined.
+
+<!-- this in Different Contexts -->
+-Follow the below examples(starting from p1.js) to understand.
