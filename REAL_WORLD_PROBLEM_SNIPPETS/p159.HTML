@@ -1,0 +1,15 @@
+<p>"this" in Event Listeners</p>
+
+<script>
+    const btn = document.createElement("button");
+    btn.innerText = "Click Me";
+    document.body.appendChild(btn);
+
+    btn.addEventListener("click", function () {
+        console.log("Normal Function:", this);//<button>Click Me</button>
+    })
+
+    btn.addEventListener("click", () => {
+        console.log("Arrow Function:", this);//Window (lexical this)
+    })
+</script>
