@@ -1,0 +1,8 @@
+<!-- call, apply, bind -->
+
+<!-- Real-World Differences -->
+ 
+Method	    Invokes Immediately?	    Arguments Passing Style
+call	    ✅ Yes	                    Individually (a, b, c)
+apply	    ✅ Yes	                    As array ([a, b, c])
+bind	    ❌ No (returns fn)	           Individually (a, b, c)
