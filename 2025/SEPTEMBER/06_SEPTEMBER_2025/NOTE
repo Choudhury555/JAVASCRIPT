@@ -1,0 +1,22 @@
+<!-- Currying & Partial Application -->
+
+<!-- Currying (Transforming functions into single-argument chain) -->
+-Converts a function with multiple arguments into a sequence of functions, each taking one argument at a time.
+
+
+<!-- Partial Application (Fixing some arguments in advance) -->
+-Unlike currying, partial application allows you to preset some arguments and return a new function.
+
+
+<!-- Difference Between Currying vs Partial Application -->
+Feature	        Currying	                                        Partial Application
+Transforms	    Function of n args → chain of 1-arg functions	    Fixes some arguments in advance
+Calls	        f(a)(b)(c)	                                        f(a, b) (with some pre-filled)
+Flexibility	    Always 1 arg at a time	                            Flexible (some args preset, rest later)
+
+
+<!-- Real Uses -->
+-Function reusability (filter, map, reduce customization)
+-Event handlers (preset data before binding)
+-Logging & Debugging utilities
+-React/Redux functional patterns
