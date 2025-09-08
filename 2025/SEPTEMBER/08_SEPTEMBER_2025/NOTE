@@ -1,0 +1,14 @@
+<!-- Immutability -->
+-Immutability = Don’t change data directly, instead create new copies.
+-Benefits: Safer state management, fewer side-effects.
+
+<!-- Function Composition -->
+-Compose = Combine multiple small functions into one.
+-Evaluates right-to-left.
+
+<!-- Pipe -->
+-Similar to compose but evaluates left-to-right.
+
+<!-- Point-Free Style -->
+-Writing functions without explicitly mentioning arguments.
+-Makes code more declarative.
