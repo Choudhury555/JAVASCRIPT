@@ -1,0 +1,17 @@
+<!-- Prototypes & Prototype Chain -->
+
+<!-- What is a Prototype? -->
+-Every JavaScript object has an internal property [[Prototype]].
+-In most browsers, you can access it via __proto__.
+-(Prototype Chain)==>When you access a property, JS looks at the object → if not found, it looks at its prototype → continues until null.
+
+<!-- Function Prototypes -->
+-Functions in JS have a special property prototype.(only prototype not __proto__)
+-This is used when creating objects via new.
+
+<!-- Overriding & Shadowing -->
+-If an object has its own property, it shadows the prototype’s property.
+
+<!-- Why Important? -->
+-Backbone of OOP in JavaScript.
+-Used in classes (they are just syntactic sugar over prototypes).
