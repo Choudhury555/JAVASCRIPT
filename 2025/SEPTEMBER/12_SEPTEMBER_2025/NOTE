@@ -1,0 +1,4 @@
+<!-- Classes I (Syntax, Fields, Methods) -->
+-"Classes" are just "prototypes" with cleaner syntax.
+-All methods go on "ClassName.prototype".
+-constructor is a special method that runs when a new object is created.
