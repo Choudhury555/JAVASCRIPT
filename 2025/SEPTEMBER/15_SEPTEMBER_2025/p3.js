@@ -9,7 +9,7 @@ class Shape {
 
 class Circle extends Shape {
     constructor(radius) {
-        super();
+        super();//(super constructor call is mandatory if you are declaring a constructor in derived class) Must call super constructor in derived class before accessing 'this' or returning from derived constructor
         this.radius = radius;
     }
 
