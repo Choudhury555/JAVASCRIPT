@@ -1,0 +1,14 @@
+<!-- Private Fields, Private Methods & Static Members -->
+
+<!-- Private Fields (#) -->
+-Declared with a #.
+-Accessible only inside the class.
+-Not accessible via object instances.
+
+<!-- Private Methods -->
+-Same syntax as private fields (#).
+-Used for internal helper functions.
+
+<!-- Static Fields & Methods -->
+-Belong to the class itself, not instances.
+-Accessed with ClassName.method().
