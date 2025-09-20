@@ -1,0 +1,10 @@
+<!-- Mixins & Composition over Inheritance -->
+
+<!-- The Problem with Deep Inheritance -->
+-Inheritance works well in small hierarchies.
+-But too many layers (multi-level, diamond inheritance) become messy.
+-Example: Should FlyingFish extend Fish or Bird?
+
+<!-- What is a Mixin? -->
+-A mixin is a reusable piece of code (object or function) that adds methods to a class.
+-Allows multiple behaviors to be combined without strict inheritance.
