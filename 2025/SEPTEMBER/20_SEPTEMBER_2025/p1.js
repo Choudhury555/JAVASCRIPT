@@ -20,7 +20,9 @@ class Animal {
     }
 }
 
+//The Object. assign() method copies "properties" from one or more source objects to a target object.
 Object.assign(Animal.prototype, canFly, canSwim);
+console.log(Animal.prototype);//{ fly: [Function: fly], swim: [Function: swim] }  (Read more about Object.assign())
 
 const duck = new Animal("Duck");
 duck.fly();//Duck is flying!
