@@ -1,0 +1,8 @@
+<!-- Property Descriptors -->
+
+<!-- Property Attributes in JavaScript -->
+==>Each property in JS has attributes:
+    -value → the stored value.
+    -writable → can the value be changed?
+    -enumerable → does it show up in loops?
+    -configurable → can it be deleted or redefined?
