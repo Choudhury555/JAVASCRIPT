@@ -1,0 +1,11 @@
+<!-- Reflect API -->
+-The Reflect API (introduced in ES6) provides modern, safer, and consistent ways to work with objects. It’s often paired with Proxies.
+-Older methods (Object.defineProperty, delete obj.prop) are inconsistent.
+-Reflect provides static methods with consistent return values (true/false instead of throwing).
+-Makes meta-programming easier.
+
+
+<!-- Why Use Reflect? -->
+-Safer: returns boolean instead of throwing.
+-Works well with Proxy traps.
+-Provides uniform, clean APIs.
