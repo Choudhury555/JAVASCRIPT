@@ -1,0 +1,19 @@
+<!-- Proxy API -->
+-A proxy wraps an object and allows you to control interactions with it.
+-You define traps (handlers) for operations like get, set, deleteProperty.
+-A proxy in programming (especially in JavaScript) is an object that wraps another object (called the target), allowing you to control how operations like reading properties, setting values, or deleting properties are handled.
+-You can define traps (special handlers) to intercept and customize these operations. For example:
+    -get trap: Controls what happens when a property is accessed.
+    -set trap: Controls what happens when a property is set.
+    -deleteProperty trap: Controls what happens when a property is deleted.
+
+
+<!-- Why Introduced? -->
+-It gives more flexibility and control over how objects behave. It’s used for things like logging, validation, or even creating virtual properties.
+
+
+<!-- Why Important? -->
+-Data validation (e.g., input constraints).
+-Security (hide sensitive properties).
+-Framework internals (Vue 3 uses Proxies for reactivity).
+-Logging & debugging.
