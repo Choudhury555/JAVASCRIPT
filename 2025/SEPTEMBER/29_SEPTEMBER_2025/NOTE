@@ -1,0 +1,48 @@
+<!-- Modules Advanced: ESM vs CJS, Dynamic Import -->
+-Modules are the backbone of structuring modern JavaScript code — both in the browser and in Node.js.
+
+<!-- Why Modules? -->
+-Organize code into reusable files.
+-Avoid global scope pollution.
+-Enable dependency management.
+-Essential for scalable applications.
+
+<!-- CommonJS (CJS) – Node.js Default (Older) -->
+-Uses require() and module.exports.
+-Synchronous → good for server-side.
+-Problems: Not tree-shakable, synchronous, not standard for browsers.
+        -Not tree-shakable – Can't remove unused code easily → bigger bundles.
+        -Synchronous – require() blocks execution → slow for browser use.
+        -Not browser-standard – Needs bundling/transpiling to work in browsers.
+
+
+<!-- ECMAScript Modules (ESM) – Modern Standard -->
+-Uses import / export.
+-Asynchronous, supported in browsers & Node (with "type": "module").
+-Named Exports → multiple per file.
+-Default Export → only one per file.
+
+
+
+<!-- ESM vs CJS (Key Differences) -->
+Feature	        CommonJS (CJS)	    ECMAScript Modules (ESM)
+Syntax	        require	            import / export
+Execution	    Synchronous	        Asynchronous
+Scope	        opy of value	    Live bindings
+Environment	    Node.js	            Node.js + Browsers
+Exports	        module.exports	    export / export default
+
+<!-- Dynamic Import (import()) -->
+-import() is used to dynamically load a module when needed. It returns a Promise, so you can await it in an async function. Useful for lazy loading.
+-Useful for lazy loading.
+-Returns a Promise.
+-Real-world:
+    -Load large libraries only when needed.
+    -Code-splitting in React/Next.js.
+
+
+<!-- Mixing ESM & CJS in Node.js -->
+-In Node.js, use "type": "module" in package.json for ESM(Or use .mjs extension)
+-When using ESM, to import a CommonJS module (like lodash):Imports the whole CommonJS export as pkg, then destructures what you need.
+    e.g.   import pkg from 'lodash';
+          const { debounce } = pkg;
