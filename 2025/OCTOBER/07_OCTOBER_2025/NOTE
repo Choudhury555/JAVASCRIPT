@@ -1,0 +1,10 @@
+<!-- Numbers & BigInt (Precision Pitfalls, Math, Intl NumberFormat) -->
+
+<!-- JavaScript Number Basics -->
+-JavaScript has only one numeric type: Number.
+-It’s a 64-bit floating-point (IEEE 754).
+-Range: ±(2⁵³ − 1).
+
+<!-- BigInt – For Very Large Integers -->
+-Added in ES2020.
+-Represented by appending n.
