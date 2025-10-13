@@ -1,0 +1,15 @@
+<!-- Internationalization (Intl.*) -->
+
+Why Internationalization (i18n)?
+-Users across countries expect data (dates, currencies, lists, etc.) in familiar formats.
+-The "Intl" API helps achieve this without third-party libraries.
+-Covers:
+    -Intl.NumberFormat
+
+    -Intl.DateTimeFormat
+
+    -Intl.Collator==>Intl.Collator is a JavaScript object used for comparing and sorting strings based on locale-specific rules.
+
+    -Intl.ListFormat==>Intl.ListFormat is a JavaScript object that formats arrays into language-specific list strings, like "apples, bananas, and mangoes."
+    
+    -Intl.RelativeTimeFormat==>Intl.RelativeTimeFormat is a JavaScript object for formatting time differences (e.g., "3 days ago" or "in 2 hours") based on locale.
